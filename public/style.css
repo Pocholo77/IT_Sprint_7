@@ -1,0 +1,13 @@
+.CheckClass{
+    display: flex;
+    float: left;
+    align-items: center;
+}
+.CheckClass p{
+    display: flex;
+    float: right;
+}
+.CheckList{
+    display: flex;
+    flex-direction: column;
+}
