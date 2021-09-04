@@ -57,6 +57,17 @@ export default function App() {
     setChecked( {...checked , [name]: isChecked});
   };
 
+  const handleClick = (event) =>{
+    const { innerText , name } = event.target
+ 
+    if(  innerText === '+'){
+       name === 'four' ? setPages(parseInt(pages)+1): setLanguages(parseInt(languages)+1);
+    }
+    if( innerText === '-'){
+      name === 'four' ? setPages(pages-1) : setLanguages(languages-1);
+    }      
+  }
+
   const handlePage = (event) => {
     setPages(event.target.value);
   };
@@ -79,7 +90,7 @@ export default function App() {
           <p>Una Pagina web (500€)</p>
         </div>
         {display && (
-          <Panel pages={pages} languages={languages} handleLanguages={handleLanguages} handlePage={handlePage}> 
+          <Panel pages={pages} languages={languages} handleLanguages={handleLanguages} handlePage={handlePage} handleClick={handleClick}> 
           </Panel>
         )}
         <div className="CheckClass">
