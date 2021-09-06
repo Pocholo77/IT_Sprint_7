@@ -84,7 +84,6 @@ export default function App() {
       setDisplay(true);
     }
     if (!isChecked && name === "one") {
-      console.log("XXXXXX");
       setDisplay(false);
     }
 
@@ -94,8 +93,6 @@ export default function App() {
     if (!isChecked) {
       const aditionalPrice = name === "one" ? 0 : number.aditionalPrice;
       setNumber({ ...number, [name]: 0, aditionalPrice: aditionalPrice });
-      setPages(1);
-      setLanguages(1);
     }
     setChecked({ ...checked, [name]: isChecked });
   };
